@@ -1,0 +1,139 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nacht van Eindhoven</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  
+  <div class="container">
+      <h1 class="display-1 align-bottom mb-4" style="bold"><img width="220" src="https://cqm.nl/frontend/img/logo_40_jaar.png?v20210923"/> <span style="float: right; align: bottom"> Nacht van Eindhoven</span></h1>
+    	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown active" aria-current="page">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Container stapelen
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/stacking">Beschrijving</a></li>
+              <li><a class="dropdown-item" href="/stacking_submit">Indienen</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              TripAdvisor
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Beschrijving</a></li>
+              <li><a class="dropdown-item" href="#">Indienen</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Bier brouwen
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Beschrijving</a></li>
+              <li><a class="dropdown-item" href="#">Indienen</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Beste planner
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Beschrijving</a></li>
+              <li><a class="dropdown-item" href="#">Indienen</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div>
+    <h3 class="mt-4">Vraagstelling</h3>
+    <p>
+      Op kleine containerterminals kan het efficiënt stapelen van containers een uitdagende taak zijn. Door het gebrek aan ruimte voor stapels en de maximaal toegestane stapelhoogte is de volgorde van containers in een stapel erg belangrijk. Wanneer de eerst volgende vertrekkende container onderaan in een stapel staat, is het een tijdrovende taak om deze "uit te graven".
+    </p>
+    <p>
+Bij het maken van een stapelplan zijn van belang:
+    </p>
+    <ul>
+      <li>de dimensionering van de terminal; aantal stapels en maximale hoogte</li>
+      <li>de volgorde waarin de containers binnenkomen en volgorde van vertrek</li>
+    </ul>
+
+    <h3>Voorbeeld</h3>
+    <p>
+    In dit kleine voorbeeld zijn er twee locaties voor stapels op de terminal en de containers mogen 3 hoog opgestapeld worden. De binnenkomende volgorde van de vijf container is 1-2-3-4-5 en de uitgaande volgorde is 2-1-3-4-5. Alle containers komen eerst binnen voor ze vertrekken.
+    </p>
+<h5>Oplossing</h5> 
+    <p>De eerste drie containers worden op de eerste locatie gezet, en de laatste twee op de tweede locatie.</p>
+[PLAATJE]
+<p>Voordat container 2 kan vetrekken wordt container 3 verplaatst. </p>
+[PLAATJE]
+<p>Na deze verplaatsing kunnen containers 2,1 en 3 vetrekken.</p>
+[PLAATJE]
+<p>Na verplaatsing van container 5 kunnen ook de laatste twee in de juiste volgorde vertrekken.</p>
+</p>
+    
+  <h3>Opdracht</h3>
+  <p>
+    De kwaliteit van een stapelsplan wordt gemeten in het benodigd aantal handelingen om deze uit te voeren. Het binnenkomen, verplaatsen en vertrekken worden allemaal als één handeling geteld. Het beschreven voorbeeld heeft 12 handelingen.
+Het is aan jullie om voor de gegeven 3 instanties een stapelstrategie te vinden met een zo laag mogelijk aantal handelingen.
+  </p>
+
+    <h3>Instanties</h3>
+    <p>
+      Instanties worden aangeleverd in txt-files met de volgende layout.
+    </p>
+
+    <p>
+    De eerste regel bestaat uit twee getallen, de eerste geeft het aantal stapellocaties op de terminal en het tweede geeft de maximaal toegestane hoogte.
+De tweede regel geeft de volgorde van binnenkomende en vertrekkende containers. Elk getal (containernummer) komt twee keer voor; de eerste keer dat een getal voor komt geeft de binnenkomst de tweede keer dat een getal voor komt geeft het vertrek. LET OP: het hoeft dus niet zo te zijn dat eerst alle containers binnenkomen voordat de eerste vertrekt.  
+    </p>
+
+    <h3>Oplossing beschrijven en controleren</h3>
+    <p>Oplossingen moeten worden gegeven in txt bestanden met per regel: C:X->Y, waarbij C het containernummer is, X de van-locatie (gebruik I voor inkomende containers) en Y de naar-locatie (gebruik U voor uitgaande containers). De volgende regels beschrijven dus een oplossing voor de voorbeeld instantie:
+    </p>
+
+    <p>
+     Op de USB stick staat een programma om de door jullie gemaakte oplossingen te controleren. Als de oplossing voor instantie 1 is opgeslagen onder de naam solution_1.txt, dan is deze te controleren door op SolutionChecker_1.bat te dubbel klikken. En net zo voor instantie 2, 3 en het voorbeeld. Bij een correcte / toegelaten oplossing eindigt het programma met:  Succes! Score: 12 (of een ander getal). 
+    </p>
+
+    <h3>
+      Puntentelling
+    </h3>
+    <p>Soms is het beter om snel een redelijke oplossing op te leveren, dan de beste oplossing laat aan te bieden. Om dit weer te geven wordt er voor deze opdracht op verschillende momenten gedurende de nacht gescoord. </p>
+    <h5>
+      Scoringsmethode
+    </h5>
+    <p>
+      Op ieder gegeven moment scoort het team met het kleinste aantal zetten op een instantie 10 punten, en de overige teams een proportioneel geschaald aantal punten. Hierbij wordt er als volgt gerekend: als je voor een gegeven instantie 20% meer zetten hebt, krijg je 20% minder punten tot een minimum van 0. Zie het onderstaande voorbeeld. Zonder valide oplossing scoor je 0 punten. 
+    </p>
+    <h5>Scoringsmomenten</h5>
+      <p>
+        De score wordt gemeten op de onderstaande momenten. Op de inlever-momenten dient een USB-stick met de oplossingen in .txt files ingeleverd te zijn op de centrale locatie. Na checken en berekenen is de tussenstand te zien op het daar geplaatste scherm.
+      </p>
+    <h5>NvE punten</h5>
+    <p>
+      Aan het einde van de nacht worden de gescoorde punten opgeteld (over alle instanties en alle scoringsmomenten) en geschaald zodanig dat het best scorende team 500 NvE punten verdient. 
+    </p>
+  </div>
+  </div>
+
+  
+  
+</body>

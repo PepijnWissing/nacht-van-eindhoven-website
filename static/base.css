@@ -1,0 +1,15 @@
+cb { background-color: rgb(255, 255, 255) }
+
+a {
+	text-align: center;
+	font-family: sans-serif;
+	background-color: black;
+	color: red;
+}
+
+body {
+	text-align: center;
+	font-family: sans-serif;
+	background-color: black;
+	color: white;
+}
