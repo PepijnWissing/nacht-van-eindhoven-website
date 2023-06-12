@@ -45,7 +45,7 @@ support = true
   # How to start the debugger.
   [debugger.interactive]
   transport = "localhost:0"
-  startCommand = ["dap-python", "main.py"]
+  startCommand = ["dap-python", "app.py"]
 
     # How to communicate with the debugger.
     [debugger.interactive.integratedAdapter]

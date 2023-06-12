@@ -1,67 +1,13 @@
 <!doctype html>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Nacht van Eindhoven</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-</head>
+{% include 'header.html'%}
 
 <body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   
   <div class="container">
-      <h1 class="display-1 align-bottom mb-4" style="bold"><img width="220" src="https://cqm.nl/frontend/img/logo_40_jaar.png?v20210923"/> <span style="float: right; align: bottom"> Nacht van Eindhoven</span></h1>
-    	<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item dropdown active" aria-current="page">
-            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Container stapelen
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/stacking">Beschrijving</a></li>
-              <li><a class="dropdown-item" href="/stacking_submit">Indienen</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              TripAdvisor
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Beschrijving</a></li>
-              <li><a class="dropdown-item" href="#">Indienen</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Bier brouwen
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Beschrijving</a></li>
-              <li><a class="dropdown-item" href="#">Indienen</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Beste planner
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Beschrijving</a></li>
-              <li><a class="dropdown-item" href="#">Indienen</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+      {%include "navbar.html"%}
+    
   <div>
     <h3 class="mt-4">Vraagstelling</h3>
     <p>
