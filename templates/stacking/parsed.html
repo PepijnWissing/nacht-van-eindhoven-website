@@ -11,11 +11,9 @@
     <div>
       <h3 class="mt-4">Succes!</h3>
       <p>
-        De input is verwerkt. Het resultaat wordt hier onder weergegeven. 
+        De input is verwerkt: je score is {{output['score']}}. De log wordt hier onder weergegeven. 
       </p>
-      <p>
-        {{output}}
-      </p>
+      <textarea name="solution" class="form-control" readonly rows="35">{{output['log']}}</textarea>
       
     </div>
   </div>

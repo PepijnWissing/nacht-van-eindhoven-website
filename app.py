@@ -1,5 +1,6 @@
 import random, string
 from flask import Flask, render_template, request
+from stacking_checker import StackingChecker
 
 TEAMS = [
   {
@@ -59,8 +60,16 @@ def validate_pin(id: int=0, pin:int = 0) -> bool:
       return True
   return False
 
-def check_stacking_submission(data) -> str:
-  return "Succes! Score: 12"
+def check_stacking_submission(data) -> dict:
+  inst_path = INSTANCES[int(data['instance_id'])]['path']
+  checker = StackingChecker(inst_path, data['solution'])
+  score = checker.simulate_solution()
+  log = checker.log
+  return_value = {
+    'score': score,
+    'log': log
+  }
+  return return_value
   
 
 app = Flask(  # Create a flask app
